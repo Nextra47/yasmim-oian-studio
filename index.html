@@ -807,29 +807,6 @@
     }
     .hero-word.in { opacity: 1; transform: translateY(0); }
 
-    /* ── IMAGE CURTAIN (ensaio cards) ── */
-    .ensaio-card .img-wrap {
-      position: absolute;
-      inset: 0;
-      overflow: hidden;
-    }
-    .ensaio-card .img-wrap img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transform: scale(1.12);
-      transition: transform 1.2s cubic-bezier(0.22,1,0.36,1);
-    }
-    .ensaio-card.in .img-wrap img { transform: scale(1); }
-    .ensaio-card .curtain {
-      position: absolute;
-      inset: 0;
-      background: var(--blush-light);
-      transform-origin: bottom;
-      transform: scaleY(1);
-      transition: transform 0.9s cubic-bezier(0.77,0,0.18,1);
-      z-index: 2;
-    }
-    .ensaio-card.in .curtain { transform: scaleY(0); }
 
     /* ── FLOATING DECORATIVE ── */
     @keyframes floatY {
@@ -967,9 +944,8 @@
 
   <div class="ensaios-grid">
 
-    <div class="ensaio-card" data-delay="1">
-      <div class="curtain"></div>
-      <div class="img-wrap"><img src="fotos/_MG_6874.jpg" alt="Ensaio Newborn"></div>
+    <div class="ensaio-card" data-anim="up" data-delay="1">
+      <img src="fotos/_MG_6874.jpg" alt="Ensaio Newborn">
       <div class="ensaio-overlay"></div>
       <div class="ensaio-info">
         <span class="ensaio-name">Newborn</span>
@@ -977,9 +953,8 @@
       </div>
     </div>
 
-    <div class="ensaio-card" data-delay="2">
-      <div class="curtain"></div>
-      <div class="img-wrap"><img src="fotos/_MG_0214.jpeg" alt="Ensaio Gestante"></div>
+    <div class="ensaio-card" data-anim="up" data-delay="2">
+      <img src="fotos/_MG_0214.jpeg" alt="Ensaio Gestante">
       <div class="ensaio-overlay"></div>
       <div class="ensaio-info">
         <span class="ensaio-name">Gestante</span>
@@ -987,9 +962,8 @@
       </div>
     </div>
 
-    <div class="ensaio-card" data-delay="3">
-      <div class="curtain"></div>
-      <div class="img-wrap"><img src="fotos/_MG_3645.jpg" alt="Ensaio Família"></div>
+    <div class="ensaio-card" data-anim="up" data-delay="3">
+      <img src="fotos/_MG_3645.jpg" alt="Ensaio Família">
       <div class="ensaio-overlay"></div>
       <div class="ensaio-info">
         <span class="ensaio-name">Família</span>
@@ -997,9 +971,8 @@
       </div>
     </div>
 
-    <div class="ensaio-card" data-delay="4">
-      <div class="curtain"></div>
-      <div class="img-wrap"><img src="fotos/_MG_4633.jpeg" alt="Ensaio Aniversário"></div>
+    <div class="ensaio-card" data-anim="up" data-delay="4">
+      <img src="fotos/_MG_4633.jpeg" alt="Ensaio Aniversário">
       <div class="ensaio-overlay"></div>
       <div class="ensaio-info">
         <span class="ensaio-name">Aniversário</span>
