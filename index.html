@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yasmim Oian Studio Fotográfico | Pindamonhangaba-SP</title>
+  <meta name="description" content="Especialista em ensaios gestante, newborn e família em Pindamonhangaba-SP. Porque cada fase da vida merece ser eternizada com amor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blush-light:  #FDF6F0;
+      --blush-mid:    #F2D9D0;
+      --blush-warm:   #E8C4B8;
+      --rose:         #D4A5A0;
+      --rose-dark:    #A0706B;
+      --rose-deeper:  #7A4A47;
+      --dark:         #2E1A19;
+      --text:         #4A3030;
+      --text-light:   #8B6B68;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--blush-light);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(253,246,240,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--blush-warm);
+      padding: 0 48px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: box-shadow 0.3s;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--dark);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--rose-dark); }
+
+    .nav-cta {
+      background: var(--rose-deeper) !important;
+      color: white !important;
+      padding: 11px 24px;
+      border-radius: 2px;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--dark) !important; }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-hamburger span {
+      width: 24px;
+      height: 1.5px;
+      background: var(--dark);
+      display: block;
+      transition: all 0.3s;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('fotos/5C4D823F-DA15-46CE-B1D8-2668DD49D416.jpg');
+      background-size: cover;
+      background-position: center top;
+      background-color: var(--blush-mid);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(253,246,240,0.55) 0%,
+        rgba(242,217,208,0.40) 50%,
+        rgba(253,246,240,0.85) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      padding: 0 24px;
+      max-width: 720px;
+    }
+
+    .hero-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--rose-dark);
+      margin-bottom: 22px;
+      display: block;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      font-weight: 400;
+      line-height: 1.18;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--rose-deeper);
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 44px;
+      font-weight: 300;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--rose-deeper);
+      color: white;
+      padding: 16px 36px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background 0.25s, transform 0.2s;
+      font-weight: 500;
+    }
+
+    .btn-primary:hover { background: var(--dark); transform: translateY(-2px); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1.5px solid var(--rose);
+      color: var(--rose-deeper);
+      padding: 15px 36px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: all 0.25s;
+      font-weight: 400;
+    }
+
+    .btn-outline:hover { background: var(--rose); color: white; border-color: var(--rose); }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-light);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .hero-scroll::after {
+      content: '';
+      width: 1px;
+      height: 44px;
+      background: linear-gradient(to bottom, var(--rose), transparent);
+      animation: scrollAnim 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollAnim {
+      0%   { transform: scaleY(0) translateY(-20px); opacity: 0; transform-origin: top; }
+      50%  { transform: scaleY(1) translateY(0); opacity: 1; transform-origin: top; }
+      100% { transform: scaleY(0) translateY(20px); opacity: 0; transform-origin: bottom; }
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 100px 48px; }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--rose-dark);
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+      font-weight: 400;
+      color: var(--dark);
+      line-height: 1.22;
+      margin-bottom: 18px;
+    }
+
+    .section-title em { font-style: italic; color: var(--rose-deeper); }
+
+    .section-text {
+      font-size: 0.96rem;
+      color: var(--text-light);
+      font-weight: 300;
+      line-height: 1.9;
+      max-width: 540px;
+    }
+
+    /* ── ENSAIOS ── */
+    #ensaios {
+      background: var(--blush-light);
+      text-align: center;
+    }
+
+    .ensaios-header { max-width: 580px; margin: 0 auto 64px; }
+    .ensaios-header .section-text { margin: 0 auto; }
+
+    .ensaios-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .ensaio-card {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      border-radius: 3px;
+      cursor: pointer;
+      background: var(--blush-mid);
+    }
+
+    .ensaio-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+      display: block;
+    }
+
+    .ensaio-card:hover img { transform: scale(1.06); }
+
+    /* gradient placeholder when no image */
+    .ensaio-card:not(:has(img)) { background: linear-gradient(160deg, var(--blush-mid) 0%, var(--blush-warm) 100%); }
+    .ensaio-card:nth-child(2):not(:has(img)) { background: linear-gradient(160deg, #F0D8D5 0%, #DDB5B0 100%); }
+    .ensaio-card:nth-child(3):not(:has(img)) { background: linear-gradient(160deg, #F5E8E4 0%, #E4C5BE 100%); }
+    .ensaio-card:nth-child(4):not(:has(img)) { background: linear-gradient(160deg, #EDD5CE 0%, #D4A8A2 100%); }
+
+    .ensaio-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(46,26,25,0.82) 0%, rgba(46,26,25,0.1) 55%, transparent 100%);
+      transition: opacity 0.4s;
+    }
+
+    .ensaio-card:hover .ensaio-overlay { opacity: 1.1; }
+
+    .ensaio-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 28px 22px;
+      color: white;
+    }
+
+    .ensaio-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .ensaio-desc {
+      font-size: 0.76rem;
+      opacity: 0.75;
+      letter-spacing: 0.04em;
+      line-height: 1.4;
+    }
+
+    /* ── SOBRE ── */
+    #sobre {
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sobre-inner {
+      max-width: 1140px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 88px;
+      align-items: center;
+    }
+
+    .sobre-img-wrap {
+      position: relative;
+    }
+
+    .sobre-img {
+      aspect-ratio: 3/4;
+      background: linear-gradient(160deg, var(--blush-mid) 0%, var(--blush-warm) 100%);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .sobre-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .sobre-accent {
+      position: absolute;
+      bottom: -18px;
+      right: -18px;
+      width: 110px;
+      height: 110px;
+      border: 2px solid var(--blush-warm);
+      border-radius: 2px;
+      z-index: -1;
+    }
+
+    .sobre-badge {
+      position: absolute;
+      top: -18px;
+      left: -18px;
+      width: 88px;
+      height: 88px;
+      background: var(--rose-deeper);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .sobre-badge strong {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      display: block;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .sobre-stats {
+      display: flex;
+      gap: 40px;
+      margin: 36px 0 40px;
+      padding: 28px 0;
+      border-top: 1px solid var(--blush-mid);
+      border-bottom: 1px solid var(--blush-mid);
+    }
+
+    .stat-item { text-align: left; }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--rose-deeper);
+      line-height: 1;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-top: 4px;
+      display: block;
+    }
+
+    .sobre-signature {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.7rem;
+      color: var(--rose-deeper);
+      margin-top: 32px;
+      display: block;
+    }
+
+    /* ── DEPOIMENTOS ── */
+    #depoimentos {
+      background: var(--blush-light);
+      text-align: center;
+    }
+
+    .depo-header { max-width: 500px; margin: 0 auto 60px; }
+
+    .depo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .depo-card {
+      background: white;
+      padding: 36px 30px;
+      border-radius: 3px;
+      text-align: left;
+    }
+
+    .depo-stars {
+      color: var(--rose);
+      font-size: 0.85rem;
+      margin-bottom: 16px;
+      display: block;
+      letter-spacing: 2px;
+    }
+
+    .depo-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: var(--blush-warm);
+      line-height: 0.5;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .depo-text {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.85;
+      font-style: italic;
+      margin-bottom: 26px;
+    }
+
+    .depo-author {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding-top: 20px;
+      border-top: 1px solid var(--blush-mid);
+    }
+
+    .depo-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--blush-warm);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .depo-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+    .depo-name {
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--dark);
+      display: block;
+    }
+
+    .depo-label {
+      font-size: 0.7rem;
+      color: var(--rose-dark);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ── INSTAGRAM ── */
+    #instagram {
+      background: white;
+      text-align: center;
+      padding-bottom: 80px;
+    }
+
+    .insta-handle {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.5rem;
+      color: var(--rose-deeper);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .insta-handle:hover { color: var(--rose-dark); }
+
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 4px;
+      max-width: 1140px;
+      margin: 44px auto 36px;
+    }
+
+    .insta-item {
+      aspect-ratio: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .insta-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+      display: block;
+    }
+
+    .insta-item:hover img { transform: scale(1.06); }
+
+    /* fallback color when no image */
+    .insta-item:nth-child(1):not(:has(img)) { background: #F2D9D0; }
+    .insta-item:nth-child(2):not(:has(img)) { background: #E8C4B8; }
+    .insta-item:nth-child(3):not(:has(img)) { background: #F0D8D5; }
+    .insta-item:nth-child(4):not(:has(img)) { background: #EDD5CE; }
+    .insta-item:nth-child(5):not(:has(img)) { background: #E8C4B8; }
+    .insta-item:nth-child(6):not(:has(img)) { background: #F5E8E4; }
+
+    /* ── CONTATO ── */
+    #contato {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+    }
+
+    .contato-inner { max-width: 700px; margin: 0 auto; }
+
+    .contato-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--rose);
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .contato-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+      font-weight: 400;
+      color: white;
+      line-height: 1.22;
+      margin-bottom: 18px;
+    }
+
+    .contato-title em { font-style: italic; color: var(--rose); }
+
+    .contato-sub {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.95rem;
+      margin-bottom: 48px;
+      font-weight: 300;
+    }
+
+    .contato-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: white;
+      padding: 16px 36px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-radius: 2px;
+      transition: background 0.25s, transform 0.2s;
+    }
+
+    .btn-whatsapp:hover { background: #1EB95A; transform: translateY(-2px); }
+
+    .btn-insta-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1.5px solid rgba(255,255,255,0.22);
+      color: rgba(255,255,255,0.8);
+      padding: 15px 36px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: all 0.25s;
+    }
+
+    .btn-insta-dark:hover { border-color: var(--rose); color: var(--rose); }
+
+    .contato-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255,255,255,0.12);
+      margin: 0 auto 40px;
+    }
+
+    .contato-info {
+      display: flex;
+      justify-content: center;
+      gap: 56px;
+      flex-wrap: wrap;
+    }
+
+    .info-item { text-align: center; }
+
+    .info-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .info-value {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.88rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1C0C0B;
+      padding: 26px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer-copy {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.22);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── FLOATING WHATSAPP ── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 22px rgba(37,211,102,0.45);
+      z-index: 999;
+      text-decoration: none;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37,211,102,0.55);
+    }
+
+    .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+
+    /* ── RESPONSIVE ── */
+    /* ── MARQUEE ── */
+    @keyframes marquee     { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes marqueeBack { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+    .marquee-track {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rose-deeper);
+    }
+    .marquee-track span { white-space: nowrap; }
+    .marquee-reverse { color: rgba(255,255,255,0.18); font-family:'Playfair Display',serif; font-style:italic; }
+
+    /* ── ANIMAÇÕES BASE ── */
+    [data-anim] {
+      opacity: 0;
+      transition: opacity 0.85s cubic-bezier(0.22,1,0.36,1),
+                  transform 0.85s cubic-bezier(0.22,1,0.36,1),
+                  clip-path 0.9s cubic-bezier(0.22,1,0.36,1);
+    }
+    [data-anim="up"]    { transform: translateY(60px); }
+    [data-anim="left"]  { transform: translateX(-70px); }
+    [data-anim="right"] { transform: translateX(70px); }
+    [data-anim="scale"] { transform: scale(0.88); }
+    [data-anim="reveal"] {
+      transform: translateY(40px);
+      clip-path: inset(0 0 100% 0);
+    }
+    [data-anim].in {
+      opacity: 1;
+      transform: none;
+      clip-path: inset(0 0 0% 0);
+    }
+
+    /* delays */
+    [data-delay="1"] { transition-delay: 0.10s; }
+    [data-delay="2"] { transition-delay: 0.20s; }
+    [data-delay="3"] { transition-delay: 0.32s; }
+    [data-delay="4"] { transition-delay: 0.44s; }
+    [data-delay="5"] { transition-delay: 0.56s; }
+    [data-delay="6"] { transition-delay: 0.68s; }
+
+    /* ── HERO TEXT WORD ANIMATION ── */
+    .hero-word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .hero-word.in { opacity: 1; transform: translateY(0); }
+
+    /* ── IMAGE CURTAIN (ensaio cards) ── */
+    .ensaio-card .img-wrap {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .ensaio-card .img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transform: scale(1.12);
+      transition: transform 1.2s cubic-bezier(0.22,1,0.36,1);
+    }
+    .ensaio-card.in .img-wrap img { transform: scale(1); }
+    .ensaio-card .curtain {
+      position: absolute;
+      inset: 0;
+      background: var(--blush-light);
+      transform-origin: bottom;
+      transform: scaleY(1);
+      transition: transform 0.9s cubic-bezier(0.77,0,0.18,1);
+      z-index: 2;
+    }
+    .ensaio-card.in .curtain { transform: scaleY(0); }
+
+    /* ── FLOATING DECORATIVE ── */
+    @keyframes floatY {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-14px); }
+    }
+    .float-el { animation: floatY 4s ease-in-out infinite; }
+    .float-el-slow { animation: floatY 6s ease-in-out infinite; animation-delay: -2s; }
+
+    /* ── HORIZONTAL PARALLAX TEXT ── */
+    .parallax-text {
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      color: var(--blush-mid);
+      opacity: 0.6;
+      padding: 16px 0;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* ── SOBRE IMAGE REVEAL ── */
+    .sobre-img-wrap .reveal-cover {
+      position: absolute;
+      inset: 0;
+      background: var(--blush-mid);
+      z-index: 3;
+      transform-origin: top;
+      transform: scaleY(1);
+      transition: transform 1.1s cubic-bezier(0.77,0,0.18,1);
+      border-radius: 3px;
+    }
+    .sobre-img-wrap.in .reveal-cover { transform: scaleY(0); }
+
+    @media (max-width: 960px) {
+      nav { padding: 0 24px; }
+      section { padding: 72px 24px; }
+      footer { padding: 24px; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px; left: 0; right: 0;
+        background: rgba(253,246,240,0.98);
+        flex-direction: column;
+        gap: 0;
+        border-top: 1px solid var(--blush-warm);
+        padding: 8px 0;
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid var(--blush-mid); width: 100%; }
+      .nav-links a { display: block; padding: 14px 24px; }
+      .nav-cta { margin: 8px 24px; display: inline-block; }
+      .nav-hamburger { display: flex; }
+
+      .ensaios-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+
+      .sobre-inner { grid-template-columns: 1fr; gap: 48px; }
+      .sobre-img { max-height: 440px; }
+      .sobre-badge { width: 72px; height: 72px; top: -14px; left: -14px; }
+
+      .depo-grid { grid-template-columns: 1fr; max-width: 500px; }
+
+      .insta-grid { grid-template-columns: repeat(3, 1fr); }
+
+      .contato-info { gap: 32px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title { font-size: 2.1rem; }
+      .sobre-stats { gap: 22px; flex-wrap: wrap; }
+      .ensaios-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .insta-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">Yasmim Oian</a>
+
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#ensaios">Ensaios</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#contato" class="nav-cta">Agendar</a></li>
+  </ul>
+</nav>
+
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-tag">Pindamonhangaba · SP</span>
+    <h1 class="hero-title">
+      Cada fase da vida<br>merece ser <em>eternizada</em><br>com amor.
+    </h1>
+    <p class="hero-sub">Especialista em ensaios gestante, newborn e família — porque cada momento único merece virar lembrança para sempre.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/5512XXXXXXXXX?text=Ol%C3%A1%2C+gostaria+de+agendar+um+ensaio!" class="btn-primary" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar Ensaio
+      </a>
+      <a href="#ensaios" class="btn-outline">Ver Portfólio</a>
+    </div>
+  </div>
+  <div class="hero-scroll">scroll</div>
+</section>
+
+
+<!-- ══ MARQUEE 1 ══ -->
+<div style="overflow:hidden; background:var(--blush-mid); padding:18px 0; border-top:1px solid var(--blush-warm); border-bottom:1px solid var(--blush-warm);">
+  <div class="marquee-track">
+    <span>Newborn &nbsp;·&nbsp; Gestante &nbsp;·&nbsp; Família &nbsp;·&nbsp; Aniversário &nbsp;·&nbsp; Casamento &nbsp;·&nbsp; Newborn &nbsp;·&nbsp; Gestante &nbsp;·&nbsp; Família &nbsp;·&nbsp; Aniversário &nbsp;·&nbsp; Casamento &nbsp;·&nbsp; Newborn &nbsp;·&nbsp; Gestante &nbsp;·&nbsp; Família &nbsp;·&nbsp; Aniversário &nbsp;·&nbsp; Casamento &nbsp;·&nbsp;</span>
+  </div>
+</div>
+
+<!-- ══ ENSAIOS ══ -->
+<section id="ensaios">
+  <div class="ensaios-header" data-anim="up">
+    <span class="section-label">Portfólio</span>
+    <h2 class="section-title">Ensaios que <em>contam histórias</em></h2>
+    <p class="section-text">Do primeiro olhar até as maiores celebrações — cada ensaio é único, cheio de emoção e feito com muito amor.</p>
+  </div>
+
+  <div class="ensaios-grid">
+
+    <div class="ensaio-card" data-delay="1">
+      <div class="curtain"></div>
+      <div class="img-wrap"><img src="fotos/_MG_6874.jpg" alt="Ensaio Newborn"></div>
+      <div class="ensaio-overlay"></div>
+      <div class="ensaio-info">
+        <span class="ensaio-name">Newborn</span>
+        <span class="ensaio-desc">A delicadeza dos primeiros dias eternizada</span>
+      </div>
+    </div>
+
+    <div class="ensaio-card" data-delay="2">
+      <div class="curtain"></div>
+      <div class="img-wrap"><img src="fotos/_MG_0214.jpeg" alt="Ensaio Gestante"></div>
+      <div class="ensaio-overlay"></div>
+      <div class="ensaio-info">
+        <span class="ensaio-name">Gestante</span>
+        <span class="ensaio-desc">Amor que cresce em cada detalhe</span>
+      </div>
+    </div>
+
+    <div class="ensaio-card" data-delay="3">
+      <div class="curtain"></div>
+      <div class="img-wrap"><img src="fotos/_MG_3645.jpg" alt="Ensaio Família"></div>
+      <div class="ensaio-overlay"></div>
+      <div class="ensaio-info">
+        <span class="ensaio-name">Família</span>
+        <span class="ensaio-desc">Momentos que unem, histórias que ficam</span>
+      </div>
+    </div>
+
+    <div class="ensaio-card" data-delay="4">
+      <div class="curtain"></div>
+      <div class="img-wrap"><img src="fotos/_MG_4633.jpeg" alt="Ensaio Aniversário"></div>
+      <div class="ensaio-overlay"></div>
+      <div class="ensaio-info">
+        <span class="ensaio-name">Aniversário</span>
+        <span class="ensaio-desc">Celebrando fases, conquistas e momentos únicos</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ MARQUEE 2 ══ -->
+<div style="overflow:hidden; background:var(--dark); padding:16px 0;">
+  <div class="marquee-track marquee-reverse" style="color:rgba(255,255,255,0.18); font-family:'Playfair Display',serif; font-style:italic;">
+    <span>eternizar momentos &nbsp;·&nbsp; amor &nbsp;·&nbsp; delicadeza &nbsp;·&nbsp; Pindamonhangaba &nbsp;·&nbsp; eternizar momentos &nbsp;·&nbsp; amor &nbsp;·&nbsp; delicadeza &nbsp;·&nbsp; Pindamonhangaba &nbsp;·&nbsp; eternizar momentos &nbsp;·&nbsp; amor &nbsp;·&nbsp; delicadeza &nbsp;·&nbsp; Pindamonhangaba &nbsp;·&nbsp;</span>
+  </div>
+</div>
+
+<!-- ══ SOBRE ══ -->
+<section id="sobre">
+  <div class="sobre-inner">
+
+    <div class="sobre-img-wrap" data-anim="left">
+      <div class="reveal-cover"></div>
+      <div class="sobre-img">
+        <img src="fotos/Yasmim .jpg.jpeg" alt="Yasmim Oian Fotógrafa">
+      </div>
+      <div class="sobre-badge float-el">
+        <strong>+5</strong>
+        anos de<br>experiência
+      </div>
+      <div class="sobre-accent"></div>
+    </div>
+
+    <div>
+      <span class="section-label" data-anim="up">Sobre mim</span>
+      <h2 class="section-title" data-anim="up" data-delay="1">Olá, eu sou a <em>Yasmim Oian</em></h2>
+      <p class="section-text" data-anim="up" data-delay="2">Sou fotógrafa especializada em ensaios gestante, newborn e família, apaixonada por eternizar as fases mais especiais da vida com delicadeza e amor.</p>
+      <p class="section-text" data-anim="up" data-delay="3" style="margin-top: 16px;">Acredito que cada momento tem uma luz única — e meu trabalho é capturá-la da forma mais autêntica e emocionante possível. Vamos contar a sua história? 🤍</p>
+
+      <div class="sobre-stats" data-anim="up" data-delay="4">
+        <div class="stat-item">
+          <span class="stat-number">+300</span>
+          <span class="stat-label">Famílias atendidas</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">+1.8k</span>
+          <span class="stat-label">Seguidores</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5★</span>
+          <span class="stat-label">Avaliação</span>
+        </div>
+      </div>
+
+      <a href="https://wa.me/5512XXXXXXXXX?text=Ol%C3%A1+Yasmim%2C+quero+saber+mais+sobre+os+ensaios!" class="btn-primary" target="_blank" rel="noopener">
+        Falar com a Yasmim
+      </a>
+
+      <span class="sobre-signature">Yasmim Oian</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ DEPOIMENTOS ══ -->
+<section id="depoimentos">
+  <div class="depo-header" data-anim="up">
+    <span class="section-label">Feedbacks</span>
+    <h2 class="section-title">O que as <em>mamães dizem</em></h2>
+  </div>
+
+  <div class="depo-grid">
+
+    <div class="depo-card" data-anim="up" data-delay="1">
+      <span class="depo-stars">★★★★★</span>
+      <span class="depo-quote">"</span>
+      <p class="depo-text">A Yasmim é incrível! Ela fez meu ensaio gestante e capturou tudo com uma delicadeza que me deixou sem palavras. As fotos ficaram lindíssimas e vou guardar para sempre.</p>
+      <div class="depo-author">
+        <div class="depo-avatar"></div>
+        <div>
+          <span class="depo-name">Ana Paula M.</span>
+          <span class="depo-label">Ensaio Gestante</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="depo-card" data-anim="up" data-delay="2">
+      <span class="depo-stars">★★★★★</span>
+      <span class="depo-quote">"</span>
+      <p class="depo-text">Fizemos o newborn da nossa Beatriz com a Yasmim e foi uma experiência incrível. Ela tem um talento especial para trabalhar com bebês e deixa tudo com muito amor e cuidado.</p>
+      <div class="depo-author">
+        <div class="depo-avatar"></div>
+        <div>
+          <span class="depo-name">Fernanda C.</span>
+          <span class="depo-label">Ensaio Newborn</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="depo-card" data-anim="up" data-delay="3">
+      <span class="depo-stars">★★★★★</span>
+      <span class="depo-quote">"</span>
+      <p class="depo-text">Super indico a Yasmim! Fizemos o ensaio de família e ela soube capturar cada momento com muita sensibilidade. As fotos ficaram naturais, lindas e cheias de vida.</p>
+      <div class="depo-author">
+        <div class="depo-avatar"></div>
+        <div>
+          <span class="depo-name">Juliana R.</span>
+          <span class="depo-label">Ensaio de Família</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ INSTAGRAM ══ -->
+<section id="instagram">
+  <span class="section-label">Acompanhe</span>
+  <a href="https://instagram.com/yasmim.oian.studio" target="_blank" rel="noopener" class="insta-handle">@yasmim.oian.studio</a>
+  <p style="font-size:0.85rem; color:var(--text-light); margin-top:4px;">Siga o estúdio no Instagram</p>
+
+  <div class="insta-grid">
+    <div class="insta-item" data-anim="scale" data-delay="1"><img src="fotos/_MG_9813.jpeg" alt=""></div>
+    <div class="insta-item" data-anim="scale" data-delay="2"><img src="fotos/_MG_3688.jpg" alt=""></div>
+    <div class="insta-item" data-anim="scale" data-delay="3"><img src="fotos/_MG_1487.jpeg" alt=""></div>
+    <div class="insta-item" data-anim="scale" data-delay="4"><img src="fotos/_MG_9747.jpeg" alt=""></div>
+    <div class="insta-item" data-anim="scale" data-delay="5"><img src="fotos/IMG_8042.jpeg" alt=""></div>
+    <div class="insta-item" data-anim="scale" data-delay="6"><img src="fotos/_MG_0003.jpeg" alt=""></div>
+  </div>
+
+  <a href="https://instagram.com/yasmim.oian.studio" target="_blank" rel="noopener" class="btn-outline" style="border-color:var(--rose); color:var(--rose-deeper);">
+    Ver no Instagram
+  </a>
+</section>
+
+
+<!-- ══ CONTATO ══ -->
+<section id="contato">
+  <div class="contato-inner">
+    <span class="contato-label" data-anim="up">Vamos conversar?</span>
+    <h2 class="contato-title" data-anim="up" data-delay="1">Pronta para <em>eternizar</em><br>esse momento?</h2>
+    <p class="contato-sub" data-anim="up" data-delay="2">Entre em contato e vamos criar algo lindo juntas. Respondo no WhatsApp com muito carinho!</p>
+
+    <div class="contato-btns" data-anim="up" data-delay="3">
+      <a href="https://wa.me/5512XXXXXXXXX?text=Ol%C3%A1+Yasmim%2C+gostaria+de+agendar+um+ensaio!" class="btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar no WhatsApp
+      </a>
+      <a href="https://instagram.com/yasmim.oian.studio" class="btn-insta-dark" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Ver Instagram
+      </a>
+    </div>
+
+    <div class="contato-divider"></div>
+
+    <div class="contato-info">
+      <div class="info-item">
+        <span class="info-label">Localização</span>
+        <span class="info-value">Pindamonhangaba · SP</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Atendimento</span>
+        <span class="info-value">Seg – Sáb · 9h às 18h</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Endereço</span>
+        <span class="info-value">R. Moacyr Miranda de Oliveira, 26</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <span class="footer-logo">Yasmim Oian</span>
+  <span class="footer-copy">© 2025 Yasmim Oian Studio Fotográfico · Pindamonhangaba-SP</span>
+</footer>
+
+
+<!-- ══ BOTÃO FLUTUANTE WHATSAPP ══ -->
+<a href="https://wa.me/5512XXXXXXXXX?text=Ol%C3%A1+Yasmim%2C+gostaria+de+agendar+um+ensaio!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+
+<script>
+  /* ══ MENU ══ */
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  document.querySelectorAll('.nav-links a').forEach(a =>
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'))
+  );
+
+  /* ══ HERO ANIMAÇÃO POR LINHA ══ */
+  const heroTitle = document.querySelector('.hero-title');
+  if (heroTitle) {
+    const raw = heroTitle.innerHTML;
+    const lines = raw.split(/<br\s*\/?>/i);
+    heroTitle.innerHTML = lines.map(l =>
+      `<span class="hero-line" style="display:block;overflow:hidden"><span class="hero-line-inner">${l}</span></span>`
+    ).join('');
+    document.querySelectorAll('.hero-line-inner').forEach((el, i) => {
+      el.style.cssText = `display:block;opacity:0;transform:translateY(40px);transition:opacity 0.75s ease ${0.25 + i*0.18}s,transform 0.75s ease ${0.25 + i*0.18}s`;
+      setTimeout(() => { el.style.opacity='1'; el.style.transform='translateY(0)'; }, 50);
+    });
+  }
+
+  /* ══ RAF LOOP — parallax + nav ══ */
+  let scrollY = 0, ticking = false;
+  const heroBg      = document.querySelector('.hero-bg');
+  const navbar      = document.getElementById('navbar');
+  const heroContent = document.querySelector('.hero-content');
+
+  function onRaf() {
+    ticking = false;
+    scrollY = window.scrollY;
+
+    /* hero parallax layers */
+    if (scrollY < window.innerHeight * 1.2) {
+      heroBg.style.transform      = `translateY(${scrollY * 0.35}px)`;
+      heroContent.style.transform = `translateY(${scrollY * 0.15}px)`;
+      heroContent.style.opacity   = `${1 - scrollY / (window.innerHeight * 0.7)}`;
+    }
+
+    /* nav shadow */
+    navbar.style.boxShadow = scrollY > 20
+      ? '0 2px 20px rgba(46,26,25,0.10)' : 'none';
+
+    /* section label parallax */
+    document.querySelectorAll('.section-label').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const mid  = rect.top + rect.height / 2 - window.innerHeight / 2;
+      el.style.transform = `translateX(${mid * 0.04}px)`;
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(onRaf); ticking = true; }
+  }, { passive: true });
+
+
+  /* ══ SCROLL REVEAL — IntersectionObserver ══ */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+
+      if (el.classList.contains('ensaio-card') || el.classList.contains('sobre-img-wrap')) {
+        el.classList.add('in');
+      } else {
+        el.classList.add('in');
+      }
+      io.unobserve(el);
+    });
+  }, { threshold: 0.14 });
+
+  document.querySelectorAll('[data-anim], .ensaio-card, .sobre-img-wrap').forEach(el => io.observe(el));
+
+  /* ══ COUNTER ANIMATION ══ */
+  function countUp(el, end, isK) {
+    const dur  = 1600;
+    let start  = null;
+    const step = (ts) => {
+      if (!start) start = ts;
+      const p = Math.min((ts - start) / dur, 1);
+      const e = 1 - Math.pow(1 - p, 4);
+      el.textContent = isK === 'k'
+        ? `+${(e * end).toFixed(1)}k`
+        : isK === '★' ? '5★'
+        : `+${Math.floor(e * end)}`;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.querySelectorAll('.stat-number').forEach(n => {
+        const t = n.textContent;
+        if (t.includes('k')) countUp(n, 1.8, 'k');
+        else if (t.includes('★')) countUp(n, 5, '★');
+        else countUp(n, 300, '');
+      });
+      e.target.style.opacity = '1';
+    });
+  }, { threshold: 0.5 }).observe(document.querySelector('.sobre-stats') || document.body);
+
+  /* ══ MARQUEE PARALLAX TEXT (entre seções) ══ */
+  document.querySelectorAll('.parallax-text').forEach(el => {
+    const base = el.dataset.speed || 0.5;
+    window.addEventListener('scroll', () => {
+      const rect = el.getBoundingClientRect();
+      const mid  = (rect.top - window.innerHeight / 2);
+      el.style.transform = `translateX(${mid * -base}px)`;
+    }, { passive: true });
+  });
+
+  /* ══ HERO ELEMENTS initial anim class ══ */
+  ['.hero-tag','.hero-sub','.hero-btns','.hero-scroll'].forEach((sel, i) => {
+    const el = document.querySelector(sel);
+    if (el) {
+      el.style.opacity   = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition= `opacity 0.7s ease ${0.2 + i*0.15}s, transform 0.7s ease ${0.2 + i*0.15}s`;
+      setTimeout(() => {
+        el.style.opacity   = '1';
+        el.style.transform = 'translateY(0)';
+      }, 50);
+    }
+  });
+
+  /* ══ 3D TILT on ensaio cards ══ */
+  document.querySelectorAll('.ensaio-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const r   = card.getBoundingClientRect();
+      const x   = (e.clientX - r.left) / r.width  - 0.5;
+      const y   = (e.clientY - r.top)  / r.height - 0.5;
+      card.style.transform = `perspective(700px) rotateY(${x*8}deg) rotateX(${-y*8}deg) scale(1.02)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+</script>
+
+</body>
+</html>
